@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --white: #FFFFFF;
+  --light-blue: #CAC9FF;
+  --very-light-blue: #ecf2ff;
+  --dark-navy: #303B59;
+  --red: #FF5555;
+  --yellow: #FFB21E;
+  --green: #00BB8F;
+  --blue: #1125D6;
+  --gray: #9799a8;
+  --bg-red: #fff6f6;
+  --bg-yellow: #fffbf4;
+  --bg-green: #f2fcf9;
+  --bg-blue: #f3f4fd;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  background-color: var(--white);
+  font-family: "Hanken Grotesk", sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container{
+  width: 100%;
+}
+.result {
+  padding: 24px 0 40px 0;
+  background: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+  border-radius: 0 0 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.result h2{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.45px;
+  color: var(--light-blue);
+  text-align: center;
+}
+
+.result-score{
+  border-radius: 100%;
+  background: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-score p{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.85px;
+  color: var(--light-blue);
+}
+
+.result-score p:first-child{
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 72px;
+  text-align: center;
+  color: var(--white);
+}
+
+.result-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-text h1{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31.27px;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.result-text p{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
+  text-align: center;
+  color: var(--light-blue);
+  width: 70%;
+}
+
+.summary{
+  padding: 24px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.summary h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.45px;
+  color: var(--dark-navy);
+}
+
+.summary__grid-container{
+  display: grid;
+  gap: 16px;
+}
+
+.summary__grid-item{
+  padding: 17.5px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.summary__content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.summary__content p{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
+}
+
+.summary__score{
+  display: flex;
+  gap: 8px;
+}
+
+.summary__score p{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.85px;
+  text-align: right;
+  color: var(--gray);
+}
+
+.summary__score p:first-child{
+  color: var(--dark-navy);
+}
+
+.reaction {
+  background-color: var(--bg-red);
+}
+
+.reaction .label{
+  color: var(--red);
+}
+
+.memory {
+  background-color: var(--bg-yellow);
+}
+
+.memory .label{
+  color: var(--yellow);
+}
+
+.verbal {
+  background-color: var(--bg-green);
+}
+
+.verbal .label{
+  color: var(--green);
+}
+
+.visual {
+  background-color: var(--bg-blue);
+}
+
+.visual .label{
+  color: var(--blue);
+}
+
+.btn {
+  background-color: var(--dark-navy);
+  color: var(--white);
+  border-radius: 128px;
+  padding-block: 17px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.45px;
+  border: none;
+  outline: none;
+}
+
+@media only screen and (min-width: 1025px) {
+  .container{
+    background-color: var(--very-light-blue);
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .background{
+    display: flex;
+    border-radius: 32px;
+    background-color: var(--white);
+    align-items: center;
+    justify-content: center;
+  }
+  .result {
+    padding: 41px 54px 51px 54px;
+    border-radius: 32px;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .result h2{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.27px;
+    margin-bottom: 35px;
+  }
+
+  .result-score{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 28px;
+  }
+
+  .result-score p{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.45px;
+  }
+
+  .result-score p:first-child{
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 72px;
+  }
+
+  .result-text h1{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41.7px;
+    margin-bottom: 14px;
+  }
+
+  .result-text p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.45px;
+    width: 260px;
+  }
+
+  .summary{
+    background-color: var(--white);
+    padding: 32.5px 40px 40.5px;
+    gap: 28px;
+    border-radius: 0 32px 32px 0;
+  }
+
+  .summary h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.27px;
+  }
+
+  .summary__grid-container{
+    margin-bottom: 13px;
+  }
+  .summary__grid-item{
+    width: 288px;
+  }
+  .summary__content p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.45px;
+  }
+  .summary__score p{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.45px;
+  }
+  .btn:hover {
+    background: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+  }
+}
